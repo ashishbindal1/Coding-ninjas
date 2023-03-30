@@ -54,32 +54,24 @@ ________________________________________________________________________________
 
 import java.util.Scanner;
 public class Main {
-
+//Write Your Code Here
 public static void main(String[] args) {
-// Write your code here
-    Scanner scan = new Scanner(System.in);
-    int n = scan.nextInt();
-    int[]num=new int [n];
-    int count = 0 , temp=0;
-    int same=0;
-    for (int i=0;i<n;i++)
-    {
-        num [i] = scan.nextInt();
-    }
-    
-    boolean flag=true;
-    for(int i = 0 ; i<n-2;i++)
-    { 
-        
-        if(num[i]<num[i+1] && num[i+1]>num[i+2])
-        {
-            flag=false;
-            break;
-        }
-        
- 
-}
-        System.out.println(flag);
+    Scanner s = new Scanner(System.in);
+	//System.out.println("Enter The Size of array");
+	int size = s.nextInt();//reading the number of elements from the that we want to enter  
+	int[] arr=new int[size];//creates an array of length size
+	//System.out.println("Enter the elements of the array of the mentioned size");
+	for (int ele=0;ele<size;ele++){
+		arr [ele] = s.nextInt();//reading array elements from the user
+	}
+	boolean flag=true;
+	for (int i=0; i<size-2; i++) {
+		if(arr[i]-arr[i+1] != arr[i+1]-arr[i+2]) {
+			flag=false;
+			break;
+		}
+	}
+	System.out.println(flag);
 }
 }
 
